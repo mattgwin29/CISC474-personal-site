@@ -8,10 +8,9 @@ body {
   }
   
   .interests {
-    text-align:left;
+    text-align:center;
   }
 
   p {
-    font-family: verdana;
     font-size: 20px;
   }
