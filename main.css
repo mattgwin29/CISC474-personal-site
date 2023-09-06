@@ -1,14 +1,14 @@
 body {
-    background-color: blue;
+    background-color: beige;
   }
   
   h1 {
-    color: white;
+    color: black;
     text-align: center;
   }
   
   .interests {
-    text-align:center;
+    text-align:left;
   }
 
   p {
