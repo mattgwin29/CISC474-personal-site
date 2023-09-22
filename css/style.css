@@ -38,7 +38,7 @@ https://www.w3schools.com/css/css_navbar_horizontal.asp
 }
 
 
-  .centered-div {
+.centered-div {
     position: absolute;
     top: 35%;
     left: 50%;
@@ -54,6 +54,10 @@ https://www.w3schools.com/css/css_navbar_horizontal.asp
     transform: translate(-50%, -50%);
 
     text-align:center;
+  }
+
+  .interests ul li {
+    text-align: left;
   }
 
   p {
