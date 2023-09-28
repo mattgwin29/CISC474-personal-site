@@ -47,7 +47,14 @@ https://www.w3schools.com/css/css_navbar_horizontal.asp
     text-align: center;
   
   }
-  .interests {
+
+.centered-text {
+  position: absolute;
+  left: 50%;
+  text-align: center;
+}
+
+.interests {
     position: absolute;
     top: 75%;
     left: 50%;

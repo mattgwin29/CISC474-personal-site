@@ -1,16 +1,51 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-    <head> 
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width"> 
-    <link rel="stylesheet" href="css/style.css" />
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="css/style.css">
 
-    <title>About me</title> 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('Ef7kKSwD1LFHM-oR-');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_bhc40up', 'template_gk7bi58', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+<body>
     <div class="navbar"></div>
-
-    </body>
-        <P>I'm Matt Gwin, currently a senior majoring in Computer Science, with a minor in Cybersecurity. I am part of the Univerity of Delaware club swimming, as well as the Association of Computing Machinery club chapter and CTF club.  </P>
-    </body> 
-</html>
+    <br>
+        <div class="centered-div">
+            <form id="contact-form">
+                <input type="hidden" name="contact_number">
+                <label>Name</label>
+                <input type="text" name="user_name" required>
+                <br>
+                <label>Email</label>
+                <input type="email" name="user_email" required>
+                <br>
+                <label>Message</label>
+                <textarea name="message"></textarea>
+                <input type="submit" value="Send" required>
+            </form>
+        </div>
+</body>
 <script src="javascript/site.js"></script>
 
+</html>
