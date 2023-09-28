@@ -13,4 +13,6 @@ function loadNavBar() {
         `;
 }
 
+
+
 loadNavBar();
