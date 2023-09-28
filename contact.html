@@ -3,7 +3,23 @@
 <head>
     <title>Contact Form</title>
     <link rel="stylesheet" href="css/style.css">
+    <script>
 
+        function ValidateEmail(input) {
+            var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            if (input.value.match(validRegex)) {
+                //alert("Valid email address!");
+                //document.contact-form.user_email.focus();
+                window.location.href = '/thank_you.html'
+                return true;
+        
+            } else {
+                alert("Invalid email address!");
+                //document.contact-form.user_email.focus();
+                return false;
+            }
+        }
+        </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
@@ -47,22 +63,6 @@
 </body>
 <script src="javascript/site.js">
 </script>
-<script>
 
-function ValidateEmail(input) {
-    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if (input.value.match(validRegex)) {
-        //alert("Valid email address!");
-        //document.contact-form.user_email.focus();
-        window.location.href = '/thank_you.html'
-        return true;
-
-    } else {
-        alert("Invalid email address!");
-        //document.contact-form.user_email.focus();
-        return false;
-    }
-}
-</script>
 
 </html>
