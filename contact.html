@@ -79,7 +79,7 @@
                 <label>Email: </label><input type="email" name="user_email" id="email" required>
                 <br>
                 <label>Message: </label><textarea name="message" id="user_message" required></textarea>
-                <input type="submit" value="Send" required onclick="ValidateInput(document.getElementById('email'), document.getElementById('phoneN'), document.getElementById('fname') , document.getElementById('lname'), document.getElementById('user_message'))">
+                <input type="submit" value="Send" required onclick="ValidateInput(document.getElementById('email').innerText, document.getElementById('phoneN').innerText, document.getElementById('fname').innerText , document.getElementById('lname').innerText, document.getElementById('user_message').innerText)">
             </form>
         </div>
 </body>
