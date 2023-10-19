@@ -7,37 +7,50 @@
 
         function ValidateInput(email, phoneNumber, firstName, lastName, message) {
 
+            var flag = true;
             var phoneNumberRegex = /^[0-9]{3}-[0-9]{3}-[0-9]{4}$/;
 
-            if (!phoneNumber.value.match(phoneNumberRegex)){
-                alert("Please enter a phone number with the format XXX-XXX-XXXX");
-                return false;
+            if (phoneNumber === null || phoneNumber === ''){
+                alert("Please enter a phone number");
+                flag= false;
+            }
+            else{
+                if (!phoneNumber.match(phoneNumberRegex)) {
+                    alert("Please enter a phone number with the format XXX-XXX-XXXX");
+                    flag = false;
+                }
             }
 
             //https://www.simplilearn.com/tutorials/javascript-tutorial/email-validation-in-javascript
-            if (message == null){
+            if (message === null || message === ''){
                 alert("Cannot send a blank message!");
-                return false;
+                flag = false;
             }
-            if (firstName == null){
+            if (firstName === null || firstName === ''){
                 alert("First name is required!");
-                return false;
+                flag= false;
             }
-            if (lastName == null){
+            if (lastName === null || lastName === ''){
                 alert("Last name is required!");
-                return false;
+                flag= false;
             }
 
-
-            var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-            if (email.value.match(validRegex)) {
-                //return true;
-        
-            } else {
-                alert("Invalid email address!");
-                return false;
+            if (email === null || email === ''){
+                alert("Please Enter an email address!");
+                flag = false;
             }
-            window.location.href = '/thank_you.html';
+            else {
+                var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+                if (email.match(validRegex)) {
+                    //return true;
+            
+                } else {
+                    alert("Invalid email address!");
+                    flag= false;
+                }
+            }
+            console.log(flag);
+            if (flag)  window.location.href = '/thank_you.html';
         }
         </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -79,7 +92,7 @@
                 <label>Email: </label><input type="email" name="user_email" id="email" required>
                 <br>
                 <label>Message: </label><textarea name="message" id="user_message" required></textarea>
-                <input type="submit" value="Send" required onclick="ValidateInput(document.getElementById('email'), document.getElementById('phoneN').innerText, document.getElementById('fname') , document.getElementById('lname'), document.getElementById('user_message'))">
+                <input type="submit" value="Send" required onclick="ValidateInput(document.getElementById('email').value, document.getElementById('phoneN').value, document.getElementById('fname').value , document.getElementById('lname').value, document.getElementById('user_message').value)">
             </form>
         </div>
 </body>
