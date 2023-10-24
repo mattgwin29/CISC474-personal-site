@@ -1,0 +1,35 @@
+/* 
+Inspired by 
+https://www.w3schools.com/css/css_navbar_horizontal.asp 
+*/
+
+.navbar {
+    width: 100%;
+    position: absolute;
+    background-color: darkblue;
+  
+  }
+  
+  .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: auto;
+    }
+  .navbar ul li {
+      display: inline;
+      float: left;
+  }
+  .navbar ul li a {
+    display: block;
+    background-color: darkblue;
+    padding: 8px;
+    color: beige;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .navbar ul li a:hover {
+    background-color: gray;
+  }
+  
