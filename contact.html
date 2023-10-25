@@ -3,6 +3,9 @@
 <head>
     <title>Contact Form</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/headerOld.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/dropdown.css">
     <script>
 
         function ValidateInput(email, phoneNumber, firstName, lastName, message) {
@@ -95,9 +98,13 @@
                 <input type="submit" value="Send" required onclick="ValidateInput(document.getElementById('email').value, document.getElementById('phoneN').value, document.getElementById('fname').value , document.getElementById('lname').value, document.getElementById('user_message').value)">
             </form>
         </div>
+        <div class="footer">    
+            <footer></footer>
+        </div>
+        <script src="javascript/footer.js"></script>
+        <script src="javascript/headerOld.js"></script>
 </body>
-<script src="javascript/site.js">
-</script>
+
 
 
 </html>

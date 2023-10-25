@@ -14,7 +14,7 @@ https://www.w3schools.com/css/css_navbar_horizontal.asp
       list-style-type: none;
       margin: 0;
       padding: 0;
-      overflow: auto;
+      overflow: visible;
     }
   .navbar ul li {
       display: inline;

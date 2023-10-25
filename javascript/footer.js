@@ -12,9 +12,20 @@ function loadFooter(){
         </a></li>
     </ul>
     <ul class="menu">
+    <div>
+      <img src="./assets/github.png" href="https://github.com/mattgwin29">
       <li class="menu__item"><a class="menu__link" href="https://github.com/mattgwin29">GitHub</a></li>
+    </div>
+
+    <div>
+      <img src="./assets/linkedin.png" href="https://linkedin.com/in/mattgwin1">
       <li class="menu__item"><a class="menu__link" href="https://linkedin.com/in/mattgwin1">LinkedIn</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Email</a></li>
+    </div>
+    
+    <div>
+      <img src="./assets/gmail.png">
+      <li class="menu__item"><a class="menu__link" href="/Contact">Email</a></li>
+    </div>
       
     </ul>
     `;

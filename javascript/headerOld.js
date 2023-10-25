@@ -13,8 +13,9 @@ function loadNavBar() {
                     <li><a href="https://mattm401.github.io/">CISC474 Website</a></li>
                     <li><a href="https://rgud0.github.io/">Previous Student</a></li>
                     <li><a href="https://hkaur02.github.io/">Next Student</a></li>
+                    </div>
                 </div>
-        </div></li>
+            </li>
         </ul>
         `;
 }
