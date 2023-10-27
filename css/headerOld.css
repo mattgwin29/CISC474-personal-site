@@ -4,8 +4,8 @@ https://www.w3schools.com/css/css_navbar_horizontal.asp
 */
 
 .navbar {
+  display: inline-block;
     width: 100%;
-    position: absolute;
     background-color: darkblue;
   
   }

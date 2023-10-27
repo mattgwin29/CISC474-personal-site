@@ -1,3 +1,6 @@
+.force-bottom {
+  min-height: 90vh;
+}
 
 ul div img {
   width: 20px;
@@ -13,8 +16,8 @@ ul img {
 
 
 .footer {
-  position: absolute;
-  bottom: 0;
+  display: inline-block;
+  margin-bottom: 0;
   width: 100%;
   background: darkblue;
 }
